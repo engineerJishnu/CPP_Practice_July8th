@@ -6,10 +6,12 @@
 //  Copyright © 2018 Jishnu Chakrabarti. All rights reserved.
 //
 
-#include <iostream>
+#include "header.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    Message("Hello World!");
+    std::cout << R"(John Wick is the man of "FOCUS", "COMMITMENT" and "SHEER WILL".)" << std::endl;
+    
     return 0;
 }
