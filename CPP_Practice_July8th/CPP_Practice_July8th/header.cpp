@@ -47,3 +47,8 @@ void derievedClass::print() {
     std::cout << std::endl;
 }
 //std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+
+// class with smart pointers
+void A::someMessage() {
+    Message("this is an example of Unique Pointer with class A.");
+}

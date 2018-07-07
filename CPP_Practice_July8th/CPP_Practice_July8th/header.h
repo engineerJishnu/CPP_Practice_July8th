@@ -13,6 +13,8 @@
 #include <string>
 #include <vector>
 #include <thread>
+#include <memory> // unique pointer
+
 
 void Message (const char* message);
 
@@ -39,4 +41,11 @@ public:
     void print();
     std::vector<int> numbers;
 };
+//class with smart pointers
+
+class A {
+public:
+    void someMessage();
+};
+
 #endif /* header_h */

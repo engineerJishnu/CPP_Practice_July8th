@@ -37,8 +37,29 @@ int main(int argc, const char * argv[]) {
     //DObject1.display("jishnu", 45);
     Message("the example of inheritance");
     pointerderievedclass -> display("jishnu", 45);
-    //
+    //smart pointers
+    // systax is ... std::unique_ptr<type> nameOfvariable (new type);
+    std::unique_ptr<A> ClassA (new A);
+    ClassA -> someMessage();
+    // address of the ClassA
+    std::cout << "The address of ClassA " << ClassA.get() << std::endl;
+    
+    // transfer of the ownership
+    std::unique_ptr<A> ClassB = move(ClassA);
+    Message("\nTransfering the ownership from ClassA to ClassB");
+    ClassB -> someMessage();
+    std::cout << "The address of ClassA " << ClassA.get() << std::endl;
+    std::cout << "The address of ClassB " << ClassB.get() << std::endl;
     Message("The end of program.");
+    
+    //transfering of the ownership
+    std::unique_ptr<A> ClassC = move(ClassB);
+    Message("\nTransfering the ownership from ClassB to ClassC");
+    ClassC -> someMessage();
+    std::cout << "The address of ClassA " << ClassA.get() << std::endl;
+    std::cout << "The address of ClassB " << ClassB.get() << std::endl;
+    std::cout << "The address of ClassC " << ClassC.get() << std::endl;
     
     return 0;
 }
+
