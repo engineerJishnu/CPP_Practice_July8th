@@ -34,7 +34,9 @@ public:
     void display(std::string name, int age);
 };
 
-class derievedClass {
-    
+class derievedClass:public parentClass {
+public:
+    void print();
+    std::vector<int> numbers;
 };
 #endif /* header_h */
