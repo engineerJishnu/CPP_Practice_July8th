@@ -11,7 +11,13 @@
 int main(int argc, const char * argv[]) {
     
     Message("Hello World!");
+    //Raw String Literals
     std::cout << R"(John Wick is the man of "FOCUS", "COMMITMENT" and "SHEER WILL".)" << std::endl;
+    // templates
+    printVal(420);
+    printVal(3.1415);
+    printVal("This is a Template");
+
     
     return 0;
 }
