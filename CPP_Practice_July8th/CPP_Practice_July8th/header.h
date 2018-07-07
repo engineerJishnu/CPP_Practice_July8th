@@ -29,7 +29,9 @@ private:
     int pCAge;
     
 public:
-    
+    parentClass();
+    ~parentClass();
+    void display(std::string name, int age);
 };
 
 

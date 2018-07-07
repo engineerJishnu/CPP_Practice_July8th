@@ -17,7 +17,13 @@ int main(int argc, const char * argv[]) {
     printVal(420);
     printVal(3.1415);
     printVal("This is a Template");
-
+    // class
+    parentClass object1;
+    parentClass * pointerparentClass;
+    pointerparentClass = nullptr;
+    pointerparentClass = &object1;
+    Message("This class has class pointer");
+    pointerparentClass -> display("Bjarne" , 70);
     
     return 0;
 }

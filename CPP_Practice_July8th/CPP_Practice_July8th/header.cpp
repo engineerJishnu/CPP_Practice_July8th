@@ -12,3 +12,18 @@ void Message (const char* message) {
     // KR style code block
     std::cout << (message) << std::endl;
 }
+
+//class
+parentClass::parentClass(){
+    // create the object
+}
+parentClass::~parentClass() {
+    // destroy the object
+}
+void parentClass::display(std::string name, int age) {
+    pCName = name;
+    pCAge = age;
+    
+    std::cout << "The name is " << pCName << " and age is " << pCAge << std::endl;
+}
+
