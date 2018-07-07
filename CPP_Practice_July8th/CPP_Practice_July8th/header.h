@@ -34,5 +34,7 @@ public:
     void display(std::string name, int age);
 };
 
-
+class derievedClass {
+    
+};
 #endif /* header_h */

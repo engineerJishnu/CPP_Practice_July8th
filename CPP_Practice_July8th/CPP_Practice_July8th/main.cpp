@@ -25,5 +25,6 @@ int main(int argc, const char * argv[]) {
     Message("This class has class pointer");
     pointerparentClass -> display("Bjarne" , 70);
     
+    
     return 0;
 }
