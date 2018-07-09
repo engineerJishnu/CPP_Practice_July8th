@@ -60,6 +60,19 @@ int main(int argc, const char * argv[]) {
     std::cout << "The address of ClassB " << ClassB.get() << std::endl;
     std::cout << "The address of ClassC " << ClassC.get() << std::endl;
     
+    // simple struct example without function
+    Message("An Example of struct");
+    struct sPerson sObject1;
+    std::cout << "Enter name " << std::endl;
+    std::cin >> sObject1.name;
+    std::cout << "Enter age " << std::endl;
+    std::cin >> sObject1.age;
+    std::cout << "Enter Basic salary " << std::endl;
+    std::cin >> sObject1.mBasic;
+    std::cout << "The output" << std::endl;
+    std::cout << "----------" << std::endl;
+    std::cout << "Name \t" << sObject1.name << " Age \t" << sObject1.age << " Basic Salary\t" << sObject1.mBasic << std::endl;
+    
     return 0;
 }
 

@@ -48,4 +48,9 @@ public:
     void someMessage();
 };
 
+struct sPerson {
+    std::string name;
+    int age;
+    float mBasic;
+};
 #endif /* header_h */
