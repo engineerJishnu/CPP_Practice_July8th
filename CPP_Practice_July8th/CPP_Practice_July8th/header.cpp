@@ -14,16 +14,15 @@ void Message (const char* message) {
 }
 
 //class
-parentClass::parentClass(){
-    // create the object
+parentClass::parentClass() {
 }
 parentClass::~parentClass() {
     // destroy the object
 }
-void parentClass::display(std::string name, int age) {
+void parentClass::display(std::string name, int age)
+{
     pCName = name;
     pCAge = age;
-    
     std::cout << "\nThe name is " << pCName << " and age is " << pCAge << std::endl;
 }
 

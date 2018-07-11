@@ -71,7 +71,7 @@ int main(int argc, const char * argv[]) {
     std::cin >> sObject1.mBasic;
     std::cout << "The output" << std::endl;
     std::cout << "----------" << std::endl;
-    std::cout << "Name \t" << sObject1.name << " Age \t" << sObject1.age << " Basic Salary\t" << sObject1.mBasic << std::endl;
+    std::cout << "Name - " << sObject1.name << "\tAge - " << sObject1.age << "\tBasic Salary (Euro) - " << sObject1.mBasic << std::endl;
     
     return 0;
 }
