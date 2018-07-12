@@ -72,6 +72,27 @@ int main(int argc, const char * argv[]) {
     std::cout << "The output" << std::endl;
     std::cout << "----------" << std::endl;
     std::cout << "Name - " << sObject1.name << "\tAge - " << sObject1.age << "\tBasic Salary (Euro) - " << sObject1.mBasic << std::endl;
+   //--------------------------------------------------------------------------------------
+    int array[] {1,2,3,4,5,6};
+    
+    for(int i: array) {
+        std::cout << " The data items in an array " << i << std::endl;
+    }
+    
+    int *ptr_array = array; //
+    std::cout << " The first the element of the an array " << *ptr_array << std::endl;
+    *ptr_array = 11;
+    array[1] = 12;
+    array[2] = 13;
+    
+    for (int i :array) {
+        std::cout << " The data items in an array after replacing some items " << i << std::endl;
+    }
+    
+    Message("Pointer Arithmatic");
+    std:: cout << array[1] << " " << array[2] << " " << *(ptr_array) + 3 << std::endl; // pointer arithmatic
+    
+    
     
     return 0;
 }
