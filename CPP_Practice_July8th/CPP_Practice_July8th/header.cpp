@@ -15,15 +15,18 @@ void Message (const char* message) {
 
 //class
 parentClass::parentClass() {
+    pCAge = 0;
 }
 parentClass::~parentClass() {
     // destroy the object
 }
-void parentClass::display(std::string name, int age)
+void parentClass::display()
 {
-    pCName = name;
-    pCAge = age;
-    std::cout << "\nThe name is " << pCName << " and age is " << pCAge << std::endl;
+    std::cout << "Please enter your name " << std::endl;
+    std::cin >> this -> pCName; // this pointer
+    std::cout << "Please enter your age " << std::endl;
+    std::cin >> this -> pCAge;
+    std::cout << "\nThe name is " << this -> pCName << " and age is " << this -> pCAge << std::endl;
 }
 
 // class with inheritance

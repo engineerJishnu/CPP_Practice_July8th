@@ -1,23 +1,25 @@
-//
 //  main.cpp
 //  CPP_Practice_July8th
 //
 //  Created by Jishnu Chakrabarti on 7/7/18.
 //  Copyright © 2018 Jishnu Chakrabarti. All rights reserved.
 //
-
 #include "header.h"
 
 int main(int argc, const char * argv[]) {
     
     Message("Hello World!");
+    //--------------------------------------------------------------------------------------
     
     //Raw String Literals
     std::cout << R"(John Wick is the man of "FOCUS", "COMMITMENT" and "SHEER WILL".)" << std::endl;
+    //--------------------------------------------------------------------------------------
+    
     // templates
     printVal(420);
     printVal(3.1415);
     printVal("This is a Template");
+    //--------------------------------------------------------------------------------------
     
     // simple class
     parentClass object1;
@@ -25,24 +27,27 @@ int main(int argc, const char * argv[]) {
     pointerparentClass = nullptr;
     pointerparentClass = &object1;
     Message("This class has class pointer");
-    pointerparentClass -> display("Bjarne" , 70);
+    pointerparentClass -> display();
+    //--------------------------------------------------------------------------------------
     
     // class with inheritance
-    
     derievedClass DObject1;
     derievedClass *pointerderievedclass; // class pointer
     pointerderievedclass = nullptr;
     pointerderievedclass = &DObject1; 
     pointerderievedclass -> print();
-    //DObject1.display("jishnu", 45);
+    //DObject1.display();
     Message("the example of inheritance");
-    pointerderievedclass -> display("jishnu", 45);
+    pointerderievedclass -> display();
+    //--------------------------------------------------------------------------------------
+    
     //smart pointers
-    // systax is ... std::unique_ptr<type> nameOfvariable (new type);
+    // syntax is ... std::unique_ptr<type> nameOfvariable (new type);
     std::unique_ptr<A> ClassA (new A);
     ClassA -> someMessage();
     // address of the ClassA
     std::cout << "The address of ClassA " << ClassA.get() << std::endl;
+    //--------------------------------------------------------------------------------------
     
     // transfer of the ownership
     std::unique_ptr<A> ClassB = move(ClassA);
@@ -51,6 +56,7 @@ int main(int argc, const char * argv[]) {
     std::cout << "The address of ClassA " << ClassA.get() << std::endl;
     std::cout << "The address of ClassB " << ClassB.get() << std::endl;
     Message("The end of program.");
+    //--------------------------------------------------------------------------------------
     
     //transfering of the ownership
     std::unique_ptr<A> ClassC = move(ClassB);
@@ -59,6 +65,7 @@ int main(int argc, const char * argv[]) {
     std::cout << "The address of ClassA " << ClassA.get() << std::endl;
     std::cout << "The address of ClassB " << ClassB.get() << std::endl;
     std::cout << "The address of ClassC " << ClassC.get() << std::endl;
+    //--------------------------------------------------------------------------------------
     
     // simple struct example without function
     Message("An Example of struct");
@@ -73,6 +80,7 @@ int main(int argc, const char * argv[]) {
     std::cout << "----------" << std::endl;
     std::cout << "Name - " << sObject1.name << "\tAge - " << sObject1.age << "\tBasic Salary (Euro) - " << sObject1.mBasic << std::endl;
    //--------------------------------------------------------------------------------------
+    // array and pointer arithmatic
     int array[] {1,2,3,4,5,6};
     
     for(int i: array) {
@@ -81,19 +89,19 @@ int main(int argc, const char * argv[]) {
     
     int *ptr_array = array; //
     std::cout << " The first the element of the an array " << *ptr_array << std::endl;
-    *ptr_array = 11;
-    array[1] = 12;
-    array[2] = 13;
+    *ptr_array = 11; // dereferencing the first element from 1 to 11
+    array[1] = 20; // dereferencing the first element from 1 to 20
+    array[2] = 40; // dereferencing the first element from 1 to 40
     
     for (int i :array) {
         std::cout << " The data items in an array after replacing some items " << i << std::endl;
     }
     
-    Message("Pointer Arithmatic");
+    Message("The new elements & Pointer Arithmatic");
     std:: cout << array[1] << " " << array[2] << " " << *(ptr_array) + 3 << std::endl; // pointer arithmatic
-    
-    
-    
+     //--------------------------------------------------------------------------------------
+ 
+    //--------------------------------------------------------------------------------------
     return 0;
 }
 
