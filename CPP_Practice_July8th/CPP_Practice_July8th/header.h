@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jishnu Chakrabarti. All rights reserved.
 //
 
+#pragma once
+
 #ifndef header_h
 #define header_h
 
@@ -14,7 +16,6 @@
 #include <vector>
 #include <thread>
 #include <memory> // unique pointer
-
 
 void Message (const char* message);
 
@@ -33,7 +34,7 @@ private:
 public:
     parentClass();
     ~parentClass();
-    void display(std::string name, int age);
+    void display();
 };
 
 class derievedClass:public parentClass {
