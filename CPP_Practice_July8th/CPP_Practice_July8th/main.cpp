@@ -100,7 +100,7 @@ int main(int argc, const char * argv[]) {
     Message("The new elements & Pointer Arithmatic");
     std:: cout << array[1] << " " << array[2] << " " << *(ptr_array) + 3 << std::endl; // pointer arithmatic
      //--------------------------------------------------------------------------------------
- 
+    printf("Hello Asshole\n");
     //--------------------------------------------------------------------------------------
     return 0;
 }

@@ -16,6 +16,7 @@
 #include <vector>
 #include <thread>
 #include <memory> // unique pointer
+#include <cstdio>
 
 void Message (const char* message);
 
